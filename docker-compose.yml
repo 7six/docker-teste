@@ -1,0 +1,11 @@
+services:
+  db:
+    image: node-simples 
+    ports:
+      - 3001:3000
+    networks:
+      - padrao-teste
+      - wordpress-network
+networks:
+    padrao-teste:
+      driver: overlay

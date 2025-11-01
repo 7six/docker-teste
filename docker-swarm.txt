@@ -6,3 +6,7 @@ docker swarm join --token SWMTKN-1-22agwft73xxlachdgcfzv1w091r1nc9ac451riwl9zbrw
 docker service create -p 80:80 --name meunginx nginx
 
 docker service create -p 80:80 --name meunginx --replicas=3 nginx
+
+
+docker run -p 3000:3000 -it -d --name meucontainer  node-simples
+
