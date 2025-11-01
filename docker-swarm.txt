@@ -1,0 +1,8 @@
+docker swarm init --advertise-addr 192.168.0.19
+
+docker swarm join --token SWMTKN-1-22agwft73xxlachdgcfzv1w091r1nc9ac451riwl9zbrw8e9lo-3ws97q03v81dojzv87vdobh6n 192.168.0.19:2377
+
+
+docker service create -p 80:80 --name meunginx nginx
+
+docker service create -p 80:80 --name meunginx --replicas=3 nginx
